@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://www.resonabank.co.jp/kojin/contact/chat/LA/app_chat.html -->
+<html lang="ja">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>有人チャットでのお問合せについて｜りそな銀行</title>
+        <meta name="robots" content="noindex,nofollow">
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*1 . ローカルストレージ情報の削除*/
+            localStorage.removeItem("jwt");
+
+            /*------ここからソフィア対応不可(webアプリケーションサーバから取得したjwtをローカルストレージに格納するところまで)------*/
+            /*2 . アプリケーションサーバからJWTを取得する(テスト用なのでJWTは仮のものを直接入力)*/
+            const resJwt = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlMjYxYWUwMi1lY2ZhLWVlMTEtOWY4YS0wMDIyNDg2ODc0MjAiLCJnaXZlbl9uYW1lIjoi5aSq6YOOIiwiZmFtaWx5X25hbWUiOiLkvZDol6QiLCJpc3MiOiJodHRwczovL3d3dy5yZXNvbmFiYW5rLmNvLmpwL2tvamluL2NvbnRhY3QvY2hhdC9MQS9hcHBfY2hhdC5odG1sIiwiaWF0IjoxNzQ4ODQ4OTIwLCJleHAiOjE3ODA2MjA1Njh9.rx38A2zwzYmJ0YoC-7OCXna4oDUiUaq6mrSXNcavBj8ofxICgaWXOiNWsvDW4OUvOXfzaNbswBt0d_rYBTPwgeoTlOfpUAZE-fK0cjhTNwNqY9dq1IFa9xrtL6GczZo4QiqukopBBIRU_Z-93ajyVVHbyp9KXlrJcRgqRQVy-Li2BytBVc1MABljl4TpjIpu0Bn8yMnD5SSHIaTD-axY7W-zb78AE7kq1meSe5GR_F-MH9DCNebnxBAxMn2bO-2HpuBuaVKSPz-qoY0RtSL2Sya1baV681qfvxef8OICMFoneo9zTVEtHZYrccdbY8wB_Ph3zdakPSp_DgfDTdZxWA";
+            /*取得したresJwtをセッターに入れる。*/
+            let setJwt = {
+                testjwtdata: resJwt
+            };
+            /*3 . ローカルストレージに取得したJWTを格納する(キーはjwt)*/
+            localStorage.setItem("jwt", JSON.stringify(setJwt));
+            /*------ここまでソフィア対応不可------*/
+
+            /*------ここからソフィア代筆(ローカルストレージからjwtを取得し、該当メソッドにJWTを渡すところまで)------*/
+            /*4 . ローカルストレージからJWTを取り出す(キーはjwt)*/
+            let getJwt = JSON.parse(localStorage.getItem("jwt"));
+
+            /*5 . LiveAssistに設定した該当メソッドに取得したJWTを渡す*/
+            function authoriseChatWithCallback(TestJwt) {
+                /*メソッド実行時に出力*/
+                console.log("Get JWT");
+                try {
+                    /*Webアプリケーションサーバから取得したJWTを出力*/
+                    console.log("JWT from Web Application: " + TestJwt);
+                } catch (e) {
+                    /*JWTがnullだった場合、「JWT from Web Application: Unable to generate key」を出力させる*/
+                    console.error(e);
+                    callback(null, "Unable to generate key");
+                }
+            }
+            /*JWT取得用メソッドの実行*/
+            /*引数は4 .で取り出した値*/
+            authoriseChatWithCallback(getJwt.testjwtdata);
+            /*------ここまでソフィア代筆------*/
+        </script>
+        <div id="DEC_SUPPORT_ORIGIN"></div>
+        <div id="konnect-container" style="z-index: 99998; transition: transform 500ms linear; position: fixed; right: 5px; bottom: 0px; height: 500px; width: 450px; pointer-events: none;">
+            <iframe id="konnect-frame" src="./有人チャットでのお問合せについて｜りそな銀行_files/saved_resource.html" height="100%" width="100%" style="background-color: transparent; border: none; transition: transform 500ms linear;"></iframe>
+            <div id="konnect-container-trigger-overlay" style="position: absolute; bottom: 0px; left: 0px; visibility: visible; width: 100%; height: 36px; cursor: pointer; pointer-events: auto; display: block;"></div>
+        </div>
+    </body>
+</html>
