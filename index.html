@@ -4,9 +4,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>LAテスト用</title>
         <meta name="robots" content="noindex,nofollow">
-    </head>
-    <body>
-        <script type="text/javascript">
+        
+        //Live Assistのスクリプトをインクルード
+        <script src="https://path-to-live-assist-script.js">
+        
+         <script type="text/javascript">
         	/*lpTag がグローバルオブジェクトとして存在しているか確認
 			console.log(window.lpTag);*/
             /*コードスニペット部分*/
@@ -59,5 +61,7 @@
             authoriseChatWithCallback(getJwt.testjwtdata);
             /*------ここまでソフィア代筆------*/
         </script>
+    </head>
+    <body>
     </body>
 </html>
