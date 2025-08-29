@@ -9,9 +9,9 @@ window.lpTag=window.lpTag||{},'undefined'==typeof window.lpTag._tagCount?(window
 			lpTag.identities.push(identityFn);
 			function identityFn(callback) {
     			callback({
-        			iss: "https://nina2904.github.io/test/",
+        			iss: "",
         			acr: "loa1",
-        			sub: "e261ae02-ecfa-ee11-9f8a-002248687420"
+        			sub: ""
 				});
 			}
             
@@ -20,13 +20,13 @@ window.lpTag=window.lpTag||{},'undefined'==typeof window.lpTag._tagCount?(window
 
             /*------ここからソフィア対応不可(webアプリケーションサーバから取得したjwtをローカルストレージに格納するところまで)------*/
             /*2 . アプリケーションサーバからJWTを取得する(テスト用なのでJWTは仮のものを直接入力)*/
-            const resJwt = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlMjYxYWUwMi1lY2ZhLWVlMTEtOWY4YS0wMDIyNDg2ODc0MjAiLCJnaXZlbl9uYW1lIjoi5aSq6YOOIiwiZmFtaWx5X25hbWUiOiLkvZDol6QiLCJpc3MiOiJodHRwczovL25pbmEyOTA0LmdpdGh1Yi5pby90ZXN0LyIsImlhdCI6MTc0ODg0ODkyMCwiZXhwIjoxNzg0ODg1NzgyfQ.6tpFy1Bkhehgmjx2mn2BW37vGXZ97zOmOxZo8fOGlNI11DKYSs5KHIIK379VgM7ku8JRo5Zd_yFD2ygW_84ZM4VNKwHyUEWOZOuGprHWJiVrGBYYuI99QdXPvngBaeMqWDJ2jzDHUXPTrzenFGox2WyzVzFiK_3cW6uZN1t1cyvWRfBByloU5KLMHc_2Dr-wKuZHB1sL3XLEHeSwTaeqegh_qTrK_p1BvBZTHP8B7WsDSj8DoUv4gedFYn3x35ecO8mqjgWiNNwXRwYbrvnHtWjGF3ZiEuK3Qw0RNPHDvdNyVc3B16ObyqR8pjQ5cuPjH4uNdYrzJ968_t0DECsv1Q";
+            /* const resJwt = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlMjYxYWUwMi1lY2ZhLWVlMTEtOWY4YS0wMDIyNDg2ODc0MjAiLCJnaXZlbl9uYW1lIjoi5aSq6YOOIiwiZmFtaWx5X25hbWUiOiLkvZDol6QiLCJpc3MiOiJodHRwczovL25pbmEyOTA0LmdpdGh1Yi5pby90ZXN0LyIsImlhdCI6MTc0ODg0ODkyMCwiZXhwIjoxNzg0ODg1NzgyfQ.6tpFy1Bkhehgmjx2mn2BW37vGXZ97zOmOxZo8fOGlNI11DKYSs5KHIIK379VgM7ku8JRo5Zd_yFD2ygW_84ZM4VNKwHyUEWOZOuGprHWJiVrGBYYuI99QdXPvngBaeMqWDJ2jzDHUXPTrzenFGox2WyzVzFiK_3cW6uZN1t1cyvWRfBByloU5KLMHc_2Dr-wKuZHB1sL3XLEHeSwTaeqegh_qTrK_p1BvBZTHP8B7WsDSj8DoUv4gedFYn3x35ecO8mqjgWiNNwXRwYbrvnHtWjGF3ZiEuK3Qw0RNPHDvdNyVc3B16ObyqR8pjQ5cuPjH4uNdYrzJ968_t0DECsv1Q"; */
             /*取得したresJwtをsetJwtに格納する。*/
-            let setJwt = {
+            /*let setJwt = {
                 testjwtdata: resJwt
-            };
+            }; */
 
-	　　/* ②現在のURLからクエリパラメータを取得 */
+	　　	/* ②現在のURLからクエリパラメータを取得 */
 			const urlParams = new URLSearchParams(window.location.search);
 			
 			/* ②"jsonwebtoken" パラメータの値を取得 
@@ -56,4 +56,5 @@ window.lpTag=window.lpTag||{},'undefined'==typeof window.lpTag._tagCount?(window
                     callback(null, "Unable to generate key");
                 }
             };
+
             /*JWT取得用メソッドの実行*/
