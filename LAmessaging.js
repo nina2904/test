@@ -35,11 +35,11 @@ window.lpTag=window.lpTag||{},'undefined'==typeof window.lpTag._tagCount?(window
 			const resJwt = urlParams.get('jsonwebtoken');
 			let setJwt = {testjwtdata: resJwt};
 			/*JWTがnullの場合、ログ返す処理*/
-			if (resJwt) {
+			/*if (resJwt) {
    				 localStorage.setItem("jwt", JSON.stringify({ testjwtdata: resJwt }));
 			} else {
    				 console.warn("JWT not found in URL");
-			}
+			} /*
 
 
             /*3 . ローカルストレージに取得したJWTを格納する(キーはjwt)*/
@@ -66,5 +66,6 @@ window.lpTag=window.lpTag||{},'undefined'==typeof window.lpTag._tagCount?(window
             };
 
             /*JWT取得用メソッドの実行*/
+
 
 
