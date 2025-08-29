@@ -9,9 +9,9 @@ window.lpTag=window.lpTag||{},'undefined'==typeof window.lpTag._tagCount?(window
 			lpTag.identities.push(identityFn);
 			function identityFn(callback) {
     			callback({
-        			iss: "",
+        			iss: "replace with issuer",
         			acr: "loa1",
-        			sub: ""
+        			sub: "replace with customerID"
 				});
 			}
             
@@ -66,4 +66,5 @@ window.lpTag=window.lpTag||{},'undefined'==typeof window.lpTag._tagCount?(window
             };
 
             /*JWT取得用メソッドの実行*/
+
 
