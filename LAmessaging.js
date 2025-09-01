@@ -32,8 +32,8 @@ window.lpTag=window.lpTag||{},'undefined'==typeof window.lpTag._tagCount?(window
 			/* ②"jsonwebtoken" パラメータの値を取得 
 			/* let setJwt = urlParams.get('jsonwebtoken'); */
 
-			const resJwt = urlParams.get('jsonwebtoken');
-			let setJwt = {testjwtdata: resJwt};
+			/* const resJwt = urlParams.get('jsonwebtoken'); */
+			/* let setJwt = {testjwtdata: resJwt};*/
 			/*JWTがnullの場合、ログ返す処理*/
 			/*if (resJwt) {
    				 localStorage.setItem("jwt", JSON.stringify({ testjwtdata: resJwt }));
@@ -66,6 +66,7 @@ window.lpTag=window.lpTag||{},'undefined'==typeof window.lpTag._tagCount?(window
             };
 
             /*JWT取得用メソッドの実行*/
+
 
 
 
