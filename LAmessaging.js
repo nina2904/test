@@ -20,17 +20,17 @@ window.lpTag=window.lpTag||{},'undefined'==typeof window.lpTag._tagCount?(window
 
             /*------ここからソフィア対応不可(webアプリケーションサーバから取得したjwtをローカルストレージに格納するところまで)------*/
             /*2 . アプリケーションサーバからJWTを取得する(テスト用なのでJWTは仮のものを直接入力)*/
-            /* const resJwt = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlMjYxYWUwMi1lY2ZhLWVlMTEtOWY4YS0wMDIyNDg2ODc0MjAiLCJnaXZlbl9uYW1lIjoi5aSq6YOOIiwiZmFtaWx5X25hbWUiOiLkvZDol6QiLCJpc3MiOiJodHRwczovL25pbmEyOTA0LmdpdGh1Yi5pby90ZXN0LyIsImlhdCI6MTc0ODg0ODkyMCwiZXhwIjoxNzg0ODg1NzgyfQ.6tpFy1Bkhehgmjx2mn2BW37vGXZ97zOmOxZo8fOGlNI11DKYSs5KHIIK379VgM7ku8JRo5Zd_yFD2ygW_84ZM4VNKwHyUEWOZOuGprHWJiVrGBYYuI99QdXPvngBaeMqWDJ2jzDHUXPTrzenFGox2WyzVzFiK_3cW6uZN1t1cyvWRfBByloU5KLMHc_2Dr-wKuZHB1sL3XLEHeSwTaeqegh_qTrK_p1BvBZTHP8B7WsDSj8DoUv4gedFYn3x35ecO8mqjgWiNNwXRwYbrvnHtWjGF3ZiEuK3Qw0RNPHDvdNyVc3B16ObyqR8pjQ5cuPjH4uNdYrzJ968_t0DECsv1Q"; */
+            const resJwt = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiNTc3NzJjZS01ZTdlLWYwMTEtYjRjYi0wMDBkM2FjZGQ0YjEiLCJnaXZlbl9uYW1lIjoi5aSq6YOOIiwiZmFtaWx5X25hbWUiOiLnlLDkuK0iLCJpc3MiOiJodHRwczovL25pbmEyOTA0LmdpdGh1Yi5pby90ZXN0LyIsImlhdCI6MTc1NjY5MjM5MCwiZXhwIjoxNzU5Mjg0MzkwfQ.DhA7YWLGy74XNgEya3nju7K3YX0NohH8xmFtqKAH6Js_vih8H4Bom9a6hy8-aIfQ5RXIWE4aj7xSyWis_9rtks1PQC1AI5q5fI1wWh6ir2fWSJKf6XbDxCA_1oGXVrcwkvcfLzAJtBwaVmMpeGAZl362DDE_h72KEK5N5Ib5LNVwlbtHvN27eU-HfnIfWdeDsoAgy5tmUZuHXud7MjOg9ZmrXsF9nXwvg92DSvoHkc2Ct74QiTNrd5IZtbFMJs8Slj_zmtXiG3U6w--S13-WRmvhoawhgoSp5f1zlJDwUchUt9aFVqBqL7bIPC5Rj85D1_xvU0YOgb877_iE0FRQZg";
             /*取得したresJwtをsetJwtに格納する。*/
-            /*let setJwt = {
+            let setJwt = {
                 testjwtdata: resJwt
-            }; */
+            };
 
 	　　	/* ②現在のURLからクエリパラメータを取得 */
-			const urlParams = new URLSearchParams(window.location.search);
+			/* const urlParams = new URLSearchParams(window.location.search); */
 			
 			/* ②"jsonwebtoken" パラメータの値を取得 
-			let setJwt = urlParams.get('jsonwebtoken'); */
+			/* let setJwt = urlParams.get('jsonwebtoken'); */
 
 			const resJwt = urlParams.get('jsonwebtoken');
 			let setJwt = {testjwtdata: resJwt};
@@ -66,6 +66,7 @@ window.lpTag=window.lpTag||{},'undefined'==typeof window.lpTag._tagCount?(window
             };
 
             /*JWT取得用メソッドの実行*/
+
 
 
 
