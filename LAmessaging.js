@@ -20,7 +20,7 @@ window.lpTag=window.lpTag||{},'undefined'==typeof window.lpTag._tagCount?(window
 
             /*------ここからソフィア対応不可(webアプリケーションサーバから取得したjwtをローカルストレージに格納するところまで)------*/
             /*2 . アプリケーションサーバからJWTを取得する(テスト用なのでJWTは仮のものを直接入力)*/
-            const resJwt = "aeyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiNTc3NzJjZS01ZTdlLWYwMTEtYjRjYi0wMDBkM2FjZGQ0YjEiLCJnaXZlbl9uYW1lIjoi5aSq6YOOIiwiZmFtaWx5X25hbWUiOiLnlLDkuK0iLCJpc3MiOiJodHRwczovL25pbmEyOTA0LmdpdGh1Yi5pby90ZXN0LyIsImlhdCI6MTc1NjY5MjM5MCwiZXhwIjoxNzU5Mjg0MzkwfQ.DhA7YWLGy74XNgEya3nju7K3YX0NohH8xmFtqKAH6Js_vih8H4Bom9a6hy8-aIfQ5RXIWE4aj7xSyWis_9rtks1PQC1AI5q5fI1wWh6ir2fWSJKf6XbDxCA_1oGXVrcwkvcfLzAJtBwaVmMpeGAZl362DDE_h72KEK5N5Ib5LNVwlbtHvN27eU-HfnIfWdeDsoAgy5tmUZuHXud7MjOg9ZmrXsF9nXwvg92DSvoHkc2Ct74QiTNrd5IZtbFMJs8Slj_zmtXiG3U6w--S13-WRmvhoawhgoSp5f1zlJDwUchUt9aFVqBqL7bIPC5Rj85D1_xvU0YOgb877_iE0FRQZg";
+            const resJwt = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiNTc3NzJjZS01ZTdlLWYwMTEtYjRjYi0wMDBkM2FjZGQ0YjEiLCJnaXZlbl9uYW1lIjoi5aSq6YOOIiwiZmFtaWx5X25hbWUiOiLnlLDkuK0iLCJpc3MiOiJodHRwczovL25pbmEyOTA0LmdpdGh1Yi5pby90ZXN0LyIsImlhdCI6MTc1NjY5MjM5MCwiZXhwIjoxNzU5Mjg0MzkwfQ.DhA7YWLGy74XNgEya3nju7K3YX0NohH8xmFtqKAH6Js_vih8H4Bom9a6hy8-aIfQ5RXIWE4aj7xSyWis_9rtks1PQC1AI5q5fI1wWh6ir2fWSJKf6XbDxCA_1oGXVrcwkvcfLzAJtBwaVmMpeGAZl362DDE_h72KEK5N5Ib5LNVwlbtHvN27eU-HfnIfWdeDsoAgy5tmUZuHXud7MjOg9ZmrXsF9nXwvg92DSvoHkc2Ct74QiTNrd5IZtbFMJs8Slj_zmtXiG3U6w--S13-WRmvhoawhgoSp5f1zlJDwUchUt9aFVqBqL7bIPC5Rj85D1_xvU0YOgb877_iE0FRQZgasd";
             /*取得したresJwtをsetJwtに格納する。*/
             let setJwt = {
                 testjwtdata: resJwt
@@ -66,6 +66,7 @@ window.lpTag=window.lpTag||{},'undefined'==typeof window.lpTag._tagCount?(window
             };
 
             /*JWT取得用メソッドの実行*/
+
 
 
 
