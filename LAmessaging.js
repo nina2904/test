@@ -20,7 +20,8 @@ window.lpTag=window.lpTag||{},'undefined'==typeof window.lpTag._tagCount?(window
 
             /*------ここからソフィア対応不可(webアプリケーションサーバから取得したjwtをローカルストレージに格納するところまで)------*/
             /*2 . アプリケーションサーバからJWTを取得する(テスト用なのでJWTは仮のものを直接入力)*/
-            const resJwt = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiNTc3NzJjZS01ZTdlLWYwMTEtYjRjYi0wMDBkM2FjZGQ0YjEiLCJnaXZlbl9uYW1lIjoi5aSq6YOOIiwiZmFtaWx5X25hbWUiOiLnlLDkuK0iLCJpc3MiOiJodHRwczovL25pbmEyOTA0LmdpdGh1Yi5pby90ZXN0LyIsImlhdCI6MTc1NjY5MjM5MCwiZXhwIjoxNzU5Mjg0MzkwfQ.DhA7YWLGy74XNgEya3nju7K3YX0NohH8xmFtqKAH6Js_vih8H4Bom9a6hy8-aIfQ5RXIWE4aj7xSyWis_9rtks1PQC1AI5q5fI1wWh6ir2fWSJKf6XbDxCA_1oGXVrcwkvcfLzAJtBwaVmMpeGAZl362DDE_h72KEK5N5Ib5LNVwlbtHvN27eU-HfnIfWdeDsoAgy5tmUZuHXud7MjOg9ZmrXsF9nXwvg92DSvoHkc2Ct74QiTNrd5IZtbFMJs8Slj_zmtXiG3U6w--S13-WRmvhoawhgoSp5f1zlJDwUchUt9aFVqBqL7bIPC5Rj85D1_xvU0YOgb877_iE0FRQZgasd";
+            /* const resJwt = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiNTc3NzJjZS01ZTdlLWYwMTEtYjRjYi0wMDBkM2FjZGQ0YjEiLCJnaXZlbl9uYW1lIjoi5aSq6YOOIiwiZmFtaWx5X25hbWUiOiLnlLDkuK0iLCJpc3MiOiJodHRwczovL25pbmEyOTA0LmdpdGh1Yi5pby90ZXN0LyIsImlhdCI6MTc1NjY5MjM5MCwiZXhwIjoxNzU5Mjg0MzkwfQ.DhA7YWLGy74XNgEya3nju7K3YX0NohH8xmFtqKAH6Js_vih8H4Bom9a6hy8-aIfQ5RXIWE4aj7xSyWis_9rtks1PQC1AI5q5fI1wWh6ir2fWSJKf6XbDxCA_1oGXVrcwkvcfLzAJtBwaVmMpeGAZl362DDE_h72KEK5N5Ib5LNVwlbtHvN27eU-HfnIfWdeDsoAgy5tmUZuHXud7MjOg9ZmrXsF9nXwvg92DSvoHkc2Ct74QiTNrd5IZtbFMJs8Slj_zmtXiG3U6w--S13-WRmvhoawhgoSp5f1zlJDwUchUt9aFVqBqL7bIPC5Rj85D1_xvU0YOgb877_iE0FRQZgasd"; */
+			const resJwt = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiYWQ4ODY4Mi0wZGQzLWVmMTEtYTcyZi0wMDIyNDhlNzNjZmMiLCJnaXZlbl9uYW1lIjoi5aSq6YOOIiwiZmFtaWx5X25hbWUiOiLnlLDkuK0iLCJpc3MiOiJodHRwczovL25pbmEyOTA0LmdpdGh1Yi5pby90ZXN0LyIsImlhdCI6MTc1NjY5MjM5MCwiZXhwIjoxNzU5Mjg0MzkwfQ.RqDD0NnDokMY4nibZF1UFDu-ame0Jx6ZvVAVLqKeuL_m14uIy_WT29SYQFby495q2G4z5aJUYyQAh0K6bsYgjz93-x_mf_j3h9tgvP1Uz8rYZNz0bFxl0Mu3waJoLb0YEgZmuLCOgeiKfLytrQ2tHD6TC3wh1uJwDZ-FW0c5pf2fJg2HexH7v_JOySVOPD0Rg1i8_RMrZAWl3Fv7snRapTgUdPw2XluzrYisAJnTkAEsH8_PQaL7O8KZYVsSJYEugnawCm2Ro-L83uM7-NlliLBQJAcSZjyGEAZsCynbftYyRcVJirhEeOqS2MH4D4zg0qbSi8GBlCnFyYD9A5LhQw";
             /*取得したresJwtをsetJwtに格納する。*/
             let setJwt = {
                 testjwtdata: resJwt
@@ -66,6 +67,7 @@ window.lpTag=window.lpTag||{},'undefined'==typeof window.lpTag._tagCount?(window
             };
 
             /*JWT取得用メソッドの実行*/
+
 
 
 
